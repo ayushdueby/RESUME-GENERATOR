@@ -1,0 +1,14 @@
+.background
+{
+    background-color: aquamarine;
+}
+.text
+{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#cvtemplate
+{
+    display: none ;
+}

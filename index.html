@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+  <body>
+    <div class="container" id="cvform">
+        <h1 class="text-center my-2">Resume Maker</h1>
+        <p class="text-center">by Ayush Dubey</p>
+
+
+        <!-- personal info -->
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>PERSONAL INFO</h3>
+                <div class="form-group">
+                    <label for="namefield">YOUR NAME</label>
+                    <input 
+                        type="text" placeholder="enter here" id="namefield" class="form-control">
+                </div>
+                <div class="form-group my-3">
+                    <label for="contactfield">YOUR CONTACT</label>
+                    <input 
+                        type="text" placeholder="enter here" id="contactfield" class="form-control">
+                </div>
+                <div class="form-group my-3">
+                    <label for="addressfield">YOUR ADDRESS</label>
+                    <textarea 
+                        placeholder="enter here" id="addressfield" class="form-control"
+                    ></textarea>
+                </div>
+                <p>IMPORTANT LINKS</p>
+                <div class="form-group my-3">
+                    <label for="fbfield">YOUR FACEBOOK</label>
+                    <input 
+                        type="text" placeholder="enter here" id="fbfield" class="form-control">
+                </div>
+                <div class="form-group my-3">
+                    <label for="igfield">YOUR INSTAGRAM</label>
+                    <input 
+                        type="text" placeholder="enter here" id="igfield" class="form-control">
+                </div>
+                <div class="form-group my-3">
+                    <label for="linkfield">YOUR LINKEDIN</label>
+                    <input 
+                        type="text" placeholder="enter here" id="linkfield" class="form-control">
+                </div>
+            </div>
+            
+        
+            <!-- professional info -->
+
+
+            <div class="col-md-6">
+                <h3>PROFESSIONAL INFO</h3>
+                <div class="form-group my-3">
+                    <label for="">OBJECTIVE</label>
+                    <textarea 
+                         id="objectivefield" placeholder="enter here"  class="form-control "
+                    ></textarea>
+                </div>
+
+
+                <div class="form-group my-3" id="we" >
+                    <label for="">WORK EXPERRIENCE</label>
+                    <textarea 
+                        placeholder="enter here"  class="form-control wefield"
+                    ></textarea>
+                    <div class="container text-center my-3"id="weADDBUTTON">
+                        <button onclick="addNewWeField()" class="btn btn-primary btn-sm">ADD</button>
+                    </div>
+                </div>
+                <div class="form-group my-3" id="aq" >
+                    <label for="">ACADEMIC QUALIFICATION</label>
+                    <textarea 
+                        placeholder="enter here"  class="form-control aqfield"
+                    ></textarea>
+                    <div class="container text-center my-3" id="aqADDBUTTON">
+                        <button onclick="addNewaqField()" class="btn btn-primary btn-sm">ADD</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container text-center my-3">
+            <button onclick="generatecv()" class="btn btn-primary btn-lg ">GENERATE CV</button>
+        </div>
+    </div>
+
+    <div class="container my-5 py-5 mb-5" id="cvtemplate">
+        <div class="row">
+            <div class="col-md-4 text-center my-3 background" >
+                                
+                <!-- personal info -->
+                                
+                <img src="./Default-Profile-Picture-PNG-High-Quality-Image.png" alt="abc" style="width: 200px; height: 300px;border-radius: 50%;">
+                <div class="container my-3">
+                    <p id="nameT1">AYUSH DUBEY</p>
+                    <p id="contactT">+91 9560752808</p>
+                    <p id="addressT">BQ 171 SHALIMAR BAGH NEW DELHI</p>
+                </div>
+                <hr>
+                <div class="links my-3">
+                    <a id="igT" href="https://www.instagram.com/">INSTAGRAM</a>
+                    <a id="fbT" href="https://www.instagram.com/">FACEBOOK</a>
+                    <a id="linkT" href="https://www.instagram.com/">LINKEDIN</a>
+                </div>
+                
+            </div>
+
+                <!-- professional info -->
+
+            <div class="col-md-8 ">
+
+                <div class="heading text-center mb-5">
+                    <h1 id="nameT2" style="font-weight:bold;">AYUSH DUBEY</h1>
+                </div>
+                <!-- card for objective -->
+
+                <div class="card my-3">
+                    <div class="card-header background">
+                        <h3>OBJECTIVE</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Veritatis, consectetur? Fuga corrupti eum aspernatur odit, 
+                            voluptates delectus, expedita amet necessitatibus esse 
+                            voluptate atque laboriosam nobis totam commodi iste illum
+                             inventore eveniet labore voluptatum minus vel debitis ut est 
+                             accusantium. Similique 
+                            aperiam neque perferendis ut sint eius impedit dicta 
+                            reprehenderit tenetur.</p>
+                    </div>
+                </div>
+
+                <!-- card for work experience -->
+
+                <div class="card my-3">
+                    <div class="card-header background">
+                        <h3>WORK EXPERIENCE</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="wt">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, magni.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, magni.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, magni.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- card for academic qualification -->
+
+                <div class="card my-3">
+                    <div class="card-header background">
+                        <h3>ACADEMIC QUALIFICATION</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, magni.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, magni.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, magni.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Download CV button -->
+
+                <div class="container text-center my-3">
+                    <button onclick="printcv()" class="btn btn-primary background" style="color: black">DOWNLOAD CV</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
